@@ -1,11 +1,23 @@
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
         <title>Hello World Document</title>
-        <script src="popup.js"></script>
-        <link rel="stylesheet" href="style.css" />
+        <script src="../js/popup.js"></script>
+        <link rel="stylesheet" href="../css/popup-style.css" />
     </head>
     <body>
-        <h2 id="greet">Hello world!</h2>
-        <input type="text" id="name" />
+        <div class="header">
+            <h2 id="greet">Real Word</h2>
+            <img src="../img/icon48.png" alt="" />
+        </div>
+        <div class="main">
+            <h3>최근에 추가한 단어, 숙어</h3>
+            <div class="word-list"></div>
+        </div>
+        <div class="footer">
+            <a href="chrome-extension://klmhhepamipaekdplgobndlphbdmmjkl/html/options.html" target="_blank"
+                >메인 페이지로 가기</a
+            >
+        </div>
     </body>
 </html>
