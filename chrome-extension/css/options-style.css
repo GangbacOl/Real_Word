@@ -6,7 +6,12 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
 }
 
 .header h1 {
@@ -19,7 +24,22 @@ body {
     height: 50px;
 }
 
+.header .menus {
+}
+
+.header .menus span {
+    margin: 0 10px;
+    font-size: 1.3em;
+    padding: 5px 10px;
+}
+
+.header .menus span:hover {
+    border: 1px solid black;
+    padding: 5px 9px;
+}
+
 .main {
+    margin: 40px 0 0 0;
 }
 
 .main div {
@@ -28,6 +48,11 @@ body {
 .main div li {
     list-style: none;
     font-size: 1.7em;
+    margin-top: 10px;
+}
+
+.main div li span:last-child:hover {
+    text-decoration: underline;
 }
 
 .footer {
