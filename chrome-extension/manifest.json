@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "영단어, 숙어 암기를 도와주는 크롬 확장 프로그램입니다.",
     "background": {
-        "scripts": ["js/background.js"],
+        "scripts": ["./js/dateFormat.js", "./js/background.js"],
         "persistent": false
     },
     "icons": {
