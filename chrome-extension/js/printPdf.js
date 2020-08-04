@@ -10,8 +10,9 @@ document.querySelector('body > div.header > div.menus > span:nth-child(2)').oncl
     thPractice.innerText = 'Practice';
     tr.append(thWord, thMeaning, thPractice);
     table.append(tr);
+    console.log(liContainer);
 
-    for (let i = 0; i < liContainer.childNodes.length; i++) {
+    for (let i = 1; i < liContainer.childNodes.length; i++) {
         let tr = document.createElement('tr');
         const tdEng = document.createElement('td');
         const tdKor = document.createElement('td');
