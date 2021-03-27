@@ -24,16 +24,13 @@ chrome.storage.sync.set({
 
 chrome.contextMenus.onClicked.addListener(function (clickData) {
     var selectionValue = clickData.selectionText;
-    console.log(selectionValue);
     chrome.storage.sync.get(['wordsList'], function (storageData) {
-        if (checkDayPass(storageData.wordsList[storageData.wordsList.length - 1])) {
-            console.log('good morning');
+        if (checkDayPass(storageData.wordsList[0])) {
             storageData.wordsList.unshift({
                 date: new Date().format('yyyy-MM-dd(KS)'),
                 words: [],
             });
         }
-        console.log(storageData);
         var currentValue = storageData;
         currentValue.wordsList[0].words.push(selectionValue);
         chrome.storage.sync.set({ wordsList: currentValue.wordsList });
