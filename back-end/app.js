@@ -19,13 +19,22 @@ const translateWords = (words) => {
                         target: 'ko',
                         text: word,
                     },
-                    { headers: { 'X-Naver-Client-Id': config.clientId, 'X-Naver-Client-Secret': config.clientSecret } }
+                    {
+                        headers: {
+                            'X-Naver-Client-Id': config.clientId,
+                            'X-Naver-Client-Secret': config.clientSecret,
+                        },
+                    }
                 )
                 .then((res) => res.data.message.result.translatedText)
                 .catch((err) => console.log(err));
         })
     );
 };
+
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'success' });
+});
 
 app.post('/translate', async (req, res) => {
     const { text } = req.body;
@@ -34,6 +43,6 @@ app.post('/translate', async (req, res) => {
     res.status(200).json({ translatedText: result });
 });
 
-app.listen(3000, function () {
-    console.log('http://localhost:3000/ app listening on port 3000!');
+app.listen(5000, function () {
+    console.log('app listening on port 5000!');
 });
